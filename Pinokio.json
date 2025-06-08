@@ -1,0 +1,30 @@
+{
+  "app": {
+    "name": "ClipsAI",
+    "description": "AI-powered video editing assistant.",
+    "repository": "https://github.com/ClipsAI/clipsai",
+    "image": "https://raw.githubusercontent.com/ClipsAI/clipsai/main/assets/clipsai-banner.png",
+    "start": "python main.py",
+    "env": {
+      "PYTHONUNBUFFERED": "1"
+    }
+  },
+  "scripts": [
+    {
+      "name": "Clone ClipsAI",
+      "script": "git clone https://github.com/ClipsAI/clipsai.git"
+    },
+    {
+      "name": "Setup Python venv",
+      "script": "python -m venv venv && ./venv/Scripts/activate && pip install --upgrade pip"
+    },
+    {
+      "name": "Install requirements",
+      "script": "./venv/Scripts/activate && pip install -r clipsai/requirements.txt"
+    }
+  ],
+  "entry": {
+    "script": "./venv/Scripts/activate && cd clipsai && python main.py",
+    "cwd": "clipsai"
+  }
+}
